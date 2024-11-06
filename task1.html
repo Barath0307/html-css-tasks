@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Feedback Form</title>
+  <style>
+    /* Add your responsive CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .satisfaction-options,
+    .likelihood-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .satisfaction-options label,
+    .likelihood-options label {
+      flex: 0 0 20%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .submit-button {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 767px) {
+      .satisfaction-options label,
+      .likelihood-options label {
+        flex: 0 0 33.33%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form>
+      <div class="form-group">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="last">Last</label>
+        <input type="text" id="last" name="last">
+      </div>
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="experience">Your Experience*</label>
+        <div class="satisfaction-options">
+          <label><input type="radio" name="experience" value="1"> 1</label>
+          <label><input type="radio" name="experience" value="2"> 2</label>
+          <label><input type="radio" name="experience" value="3"> 3</label>
+          <label><input type="radio" name="experience" value="4"> 4</label>
+          <label><input type="radio" name="experience" name="experience" value="5"> 5</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="satisfaction">How satisfied are you with*</label>
+        <div class="satisfaction-options">
+          <label><input type="radio" name="satisfaction-purchase" value="veryUnsatisfied"> Very Unsatisfied</label>
+          <label><input type="radio" name="satisfaction-purchase" value="unsatisfied"> Unsatisfied</label>
+          <label><input type="radio" name="satisfaction-purchase" value="neutral"> Neutral</label>
+          <label><input type="radio" name="satisfaction-purchase" value="satisfied"> Satisfied</label>
+          <label><input type="radio" name="satisfaction-purchase" value="verySatisfied"> Very Satisfied</label>
+        </div>
+        <div class="satisfaction-options">
+          <label><input type="radio" name="satisfaction-service" value="veryUnsatisfied"> Very Unsatisfied</label>
+          <label><input type="radio" name="satisfaction-service" value="unsatisfied"> Unsatisfied</label>
+          <label><input type="radio" name="satisfaction-service" value="neutral"> Neutral</label>
+          <label><input type="radio" name="satisfaction-service" value="satisfied"> Satisfied</label>
+          <label><input type="radio" name="satisfaction-service" value="verySatisfied"> Very Satisfied</label>
+        </div>
+        <div class="satisfaction-options">
+          <label><input type="radio" name="satisfaction-overall" value="veryUnsatisfied"> Very Unsatisfied</label>
+          <label><input type="radio" name="satisfaction-overall" value="unsatisfied"> Unsatisfied</label>
+          <label><input type="radio" name="satisfaction-overall" value="neutral"> Neutral</label>
+          <label><input type="radio" name="satisfaction-overall" value="satisfied"> Satisfied</label>
+          <label><input type="radio" name="satisfaction-overall" value="verySatisfied"> Very Satisfied</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="likelihood">How likely are you to*</label>
+        <div class="likelihood-options">
+          <label><input type="radio" name="likelihood-buy" value="veryUnlikely"> Very Unlikely</label>
+          <label><input type="radio" name="likelihood-buy" value="unlikely"> Unlikely</label>
+          <label><input type="radio" name="likelihood-buy" value="neutral"> Neutral</label>
+          <label><input type="radio" name="likelihood-buy" value="likely"> Likely</label>
+          <label><input type="radio" name="likelihood-buy" value="veryLikely"> Very Likely</label>
+        </div>
+        <div class="likelihood-options">
+          <label><input type="radio" name="likelihood-recommend" value="veryUnlikely"> Very Unlikely</label>
+          <label><input type="radio" name="likelihood-recommend" value="unlikely"> Unlikely</label>
+          <label><input type="radio" name="likelihood-recommend" value="neutral"> Neutral</label>
+          <label><input type="radio" name="likelihood-recommend" value="likely"> Likely</label>
+          <label><input type="radio" name="likelihood-recommend" value="veryLikely"> Very Likely</label>
+        </div>
+        <div class="likelihood-options">
+          <label><input type="radio" name="likelihood-recommend-others" value="veryUnlikely"> Very Unlikely</label>
+          <label><input type="radio" name="likelihood-recommend-others" value="unlikely"> Unlikely</label>
+          <label><input type="radio" name="likelihood-recommend-others" value="neutral"> Neutral</label>
+          <label><input type="radio" name="likelihood-recommend-others" value="likely"> Likely</label>
+          <label><input type="radio" name="likelihood-recommend-others" value="veryLikely"> Very Likely</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comments">Additional comments or suggestions</label>
+        <textarea id="comments" name="comments" rows="3"></textarea>
+      </div>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
